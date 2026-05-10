@@ -18,15 +18,16 @@ const AdminDashboard = () => {
   });
   const [editId, setEditId] = useState(null);
 
+  const fetchProducts = async () => {
+    const res = await getAllProducts();
+    setProducts(res.data);
+  };
   useEffect(() => {
     fetchProducts();
     fetchOrders();
   }, []);
 
-  const fetchProducts = async () => {
-    const res = await getAllProducts();
-    setProducts(res.data);
-  };
+  
 
   const fetchOrders = async () => {
     const res = await getAllOrders();

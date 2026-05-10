@@ -19,10 +19,7 @@ const ProductDetails = () => {
   const [comment, setComment] = useState("");
   const [orderGroupId, setOrderGroupId] = useState("");
   const [relatedProducts,setRelatedProducts] = useState([]);
-  useEffect(() => {
-    fetchProduct();
-    fetchRelatedProducts();
-  }, [fetchProduct,fetchRelatedProducts]);
+  
 
   const fetchProduct = async () => {
     try {
@@ -33,6 +30,10 @@ const ProductDetails = () => {
       console.error("Error fetching product", error);
     }
   };
+  useEffect(() => {
+    fetchProduct();
+    fetchRelatedProducts();
+  }, [fetchProduct, fetchRelatedProducts]);
   
 
   const handleDeleteReview = async (reviewId) => {

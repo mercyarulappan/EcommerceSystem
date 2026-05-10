@@ -18,9 +18,7 @@ const Home = () => {
   const query = new URLSearchParams(location.search);
   const searchText = query.get("search") || "";
 
-  useEffect(() => {
-    fetchProducts(selectedCategory);
-  }, [selectedCategory]);
+ 
 
   const { fetchCartCount } = useContext(AuthContext);
 
@@ -41,6 +39,9 @@ const Home = () => {
       console.error("Error fetching products", error);
     }
   };
+   useEffect(() => {
+     fetchProducts(selectedCategory);
+   }, [selectedCategory]);
 
   return (
     <div className="home-container">

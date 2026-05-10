@@ -27,15 +27,15 @@ const AdminProducts = () => {
     });
   };
 
-
+const fetchProducts = async () => {
+  const res = await getAllProductsByAdmin();
+  setProducts(res.data);
+};
   useEffect(() => {
     fetchProducts();
   }, []);
 
-  const fetchProducts = async () => {
-    const res = await getAllProductsByAdmin();
-    setProducts(res.data);
-  };
+  
 
   const handleDelete = async (id) => {
     const result = await Swal.fire({

@@ -1,4 +1,4 @@
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import "../css/Checkout.css";
 import { toast,Slide } from "react-toastify";
