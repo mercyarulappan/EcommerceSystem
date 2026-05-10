@@ -10,7 +10,7 @@ const EditProduct = () => {
 
   useEffect(() => {
     fetchProduct();
-  }, []);
+  }, [fetchProduct]);
 
   const fetchProduct = async () => {
     const res = await getProductById(id);

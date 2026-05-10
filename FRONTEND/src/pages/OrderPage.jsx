@@ -7,7 +7,7 @@ function OrderPage() {
   const { productId } = useParams();
   const navigate = useNavigate();
 
-  const userId = localStorage.getItem("userId");
+  // const userId = localStorage.getItem("userId");
   const [quantity, setQuantity] = useState(1);
   const { setCartCount } = useContext(AuthContext);
 
@@ -42,7 +42,7 @@ function OrderPage() {
        if (!response.ok) {
          throw new Error("Failed to place order");
        }
-       const data = await response.json();
+      //  const data = await response.json();
        
        
       

@@ -6,7 +6,6 @@ import { AuthContext } from "../context/AuthContext";
 
 function CheckoutPage() {
   const { id } = useParams();
-  const location = useLocation();
   const navigate = useNavigate();
   const { fetchCartCount } = useContext(AuthContext);
 

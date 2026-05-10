@@ -21,7 +21,7 @@ function ProfilePage() {
       .then((data) => {
         setUser(data);
       });
-  }, []);
+  }, [token]);
 
   const updateProfile = async () => {
     const response = await fetch("http://localhost:8080/api/users/profile", {
