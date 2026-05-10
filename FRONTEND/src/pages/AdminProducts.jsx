@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllProducts, deleteProduct, getAllProductsByAdmin, updateProductStatus } from "../services/productService";
+import { deleteProduct, getAllProductsByAdmin, updateProductStatus } from "../services/productService";
 import { useNavigate } from "react-router-dom";
 import "../css/AdminProducts.css";
 import Swal from "sweetalert2";
