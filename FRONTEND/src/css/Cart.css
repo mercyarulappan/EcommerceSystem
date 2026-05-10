@@ -1,0 +1,121 @@
+/* ===== MAIN BACKGROUND ===== */
+.cart-container {
+    padding: 40px;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+
+    background: radial-gradient(circle at top left, #2a1a4a, #0f0a1f);
+    color: #ffffff;
+}
+
+/* ===== TITLE ===== */
+.cart-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #e0d9ff;
+}
+
+/* ===== EMPTY STATE ===== */
+.cart-empty {
+    text-align: center;
+    color: #bfbaff;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+/* ===== CART ITEM (GLASS CARD) ===== */
+.cart-item {
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(123, 92, 255, 0.4);
+}
+
+/* ===== PRODUCT NAME ===== */
+.cart-item strong {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* ===== TEXT ===== */
+.cart-item p {
+    margin: 6px 0;
+    color: #cfc9ff;
+}
+
+/* ===== SUBTOTAL ===== */
+.cart-item p:last-child {
+    font-weight: 600;
+    color: #a084ff;
+}
+
+/* ===== REMOVE BUTTON ===== */
+.remove-btn {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #ff4d6d, #ff6b6b);
+    color: white;
+
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+}
+
+/* ===== TOTAL SECTION ===== */
+.cart-total {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #e0d9ff;
+}
+
+/* ===== ORDER BUTTON ===== */
+.order-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+    background: linear-gradient(135deg, #7b5cff, #a084ff);
+    color: white;
+
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #5a3fff, #8f6bff);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 20px;
+    }
+
+    .cart-item {
+        padding: 15px;
+    }
+}

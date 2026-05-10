@@ -1,0 +1,300 @@
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+
+    background: var(--navbar-bg);
+    backdrop-filter: blur(12px);
+    color: var(--text-main);
+    box-shadow: 0 4px 20px var(--accent-shadow);
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* ===== LEFT ===== */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent-text);
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: var(--accent-light);
+}
+
+/* ===== CENTER ===== */
+.nav-center {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+/* ===== RIGHT ===== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+}
+
+/* ===== LINKS ===== */
+.nav-link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-text);
+}
+
+/* ===== PROFILE ===== */
+.profile-link {
+    color: var(--accent-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* ===== BUTTONS ===== */
+.auth-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-border);
+    color: var(--accent-text);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: var(--accent-soft);
+}
+
+/* PRIMARY BUTTON */
+.primary-btn {
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+}
+
+/* LOGOUT */
+.logout-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: var(--danger-gradient);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--danger-shadow);
+}
+
+/* ===== SEARCH ===== */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-light);
+}
+
+/* INPUT */
+.search-input {
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    width: 300px;
+    background: transparent;
+    color: var(--text-main);
+}
+
+.search-input::placeholder {
+    color: var(--placeholder-color);
+}
+
+/* BUTTON */
+.search-btn {
+    background: var(--accent);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: var(--accent-hover);
+}
+
+/* ===== MENU ICON ===== */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--title-color);
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    color: var(--accent-text);
+}
+
+/* ===== DESKTOP MENU ===== */
+.desktop-menu {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+/* ===== NAV LINKS ===== */
+.desktop-menu a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.desktop-menu a:hover {
+    color: var(--accent-text);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100%;
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(18px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 1001;
+    border-left: 1px solid var(--border-light);
+    box-shadow: -10px 0 30px var(--accent-shadow);
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+/* ===== SIDEBAR LINKS ===== */
+.side-link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.side-link:hover {
+    background: var(--accent-soft);
+    color: white;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.side-logout {
+    background: var(--danger-gradient);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.side-logout:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--danger-shadow);
+}
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--accent-text);
+    transform: rotate(90deg);
+}
+
+/* ===== ICONS ===== */
+.nav-icon,
+.home-icon {
+    color: var(--title-color);
+}
+
+.nav-icon:hover,
+.home-icon:hover {
+    color: var(--accent-text);
+}
+
+/* ===== DROPDOWN ===== */
+.profile-dropdown {
+    background: var(--dropdown-bg);
+    border: 1px solid var(--border-light);
+}
+
+/* ITEMS */
+.dropdown-item {
+    color: var(--text-main);
+    background: var(--glass-bg);
+}
+
+.dropdown-item.logout {
+    color: var(--danger-text);
+}
+
+/* ===== CART BADGE ===== */
+.cart-badge {
+    background: red;
+    color: white;
+}
+
+/* ===== AVATAR ===== */
+.avatar-letter {
+    background: var(--avatar-gradient);
+    color: white;
+}
+
+.avatar-letter:hover {
+    background: var(--avatar-hover-gradient);
+}
+

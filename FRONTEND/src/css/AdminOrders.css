@@ -1,0 +1,156 @@
+/* Container for Admin Pages */
+.admin-container {
+    align-items: flex-start;
+    /* Start from top instead of middle */
+    padding-top: 50px;
+}
+
+.admin-content {
+    width: 100%;
+    max-width: 800px;
+    /* Wider for list views */
+    margin: 0 auto;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Order Card */
+.order-item-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.order-item-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* Text Styling */
+.order-id {
+    color: #e0d9ff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.order-id span {
+    color: #a084ff;
+    font-weight: bold;
+}
+
+.status-circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-pending {
+    background-color: rgb(230, 60, 208);
+}
+
+.status-shipped {
+    background-color: rgb(211, 236, 50);
+}
+
+.status-delivered {
+    background-color: green;
+}
+
+.status-cancelled {
+    background-color: red;
+}
+
+
+/* Select Box Adjustments */
+.order-select {
+    margin-bottom: 0;
+    /* Remove the bottom margin from standard login-input */
+    padding: 8px 12px;
+    width: auto !important;
+    min-width: 140px;
+    cursor: pointer;
+}
+
+/* The Select Box itself */
+.order-select {
+    appearance: none;
+    /* Removes default browser arrow to style our own */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+    padding-right: 35px !important;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Styling the 'Options' inside the dropdown (Browser support varies) */
+.option-dark {
+    background-color: #1a162d;
+    /* Matches your background */
+    color: white;
+}
+
+/* Styling for the disabled state */
+.order-select:disabled {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    border-color: rgba(0, 255, 136, 0.2) !important;
+    /* Faded green border */
+    color: #888 !important;
+    /* Gray out the text */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Optional: Add a "Locked" icon or style to the card when delivered */
+.order-item-card.status-delivered {
+    border-left: 4px solid #00ff88;
+    /* Highlight the completed order */
+}
+
+/* Dynamic Border colors based on the "set" status */
+.status-border-pending {
+    border-color: rgba(255, 204, 0, 0.5);
+}
+
+.status-border-shipped {
+    border-color: rgba(123, 92, 255, 0.5);
+}
+
+.status-border-delivered {
+    border-color: rgba(0, 255, 136, 0.5);
+}
+
+/* Focus state */
+.order-select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(157, 125, 250, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .order-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .order-select {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,123 @@
+/* ===== MAIN BACKGROUND ===== */
+.orders-container {
+    padding: 40px;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+
+    background: radial-gradient(circle at top left, #2a1a4a, #0f0a1f);
+    color: #ffffff;
+}
+
+/* ===== TITLE ===== */
+.orders-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #e0d9ff;
+}
+
+/* ===== ORDER CARD ===== */
+.order-card {
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(123, 92, 255, 0.4);
+}
+
+/* ===== ORDER ID ===== */
+.order-id {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* ===== TEXT ===== */
+.order-text {
+    margin: 5px 0;
+    color: #cfc9ff;
+}
+
+/* ===== STATUS ===== */
+.status {
+    font-weight: 600;
+}
+
+/* STATUS COLORS (GLOW STYLE) */
+.status-PENDING {
+    color: #ffb347;
+}
+
+.status-SHIPPED {
+    color: #4da6ff;
+}
+
+.status-DELIVERED {
+    color: #4dff88;
+}
+
+.status-CANCELLED {
+    color: #ff6b6b;
+}
+
+/* ===== BUTTONS ===== */
+.order-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+/* TRACK BUTTON */
+.track-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #7b5cff, #a084ff);
+    color: white;
+
+    transition: 0.3s;
+}
+
+.track-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #5a3fff, #8f6bff);
+}
+
+/* CANCEL BUTTON */
+.cancel-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #ff4d6d, #ff6b6b);
+    color: white;
+
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .orders-container {
+        padding: 20px;
+    }
+}

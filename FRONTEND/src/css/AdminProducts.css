@@ -1,0 +1,127 @@
+/* ===== PAGE BACKGROUND (SAME AS LOGIN) ===== */
+.admin-products {
+    min-height: 100vh;
+    padding: 30px;
+    font-family: "Segoe UI", sans-serif;
+
+    background: radial-gradient(circle at top left, #2a1a4a, #0f0a1f);
+    color: #e0d9ff;
+}
+
+/* ===== HEADING ===== */
+.admin-products h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* ===== ADD BUTTON ===== */
+.add-btn {
+    padding: 10px 18px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+    background: linear-gradient(135deg, #7b5cff, #a084ff);
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: linear-gradient(135deg, #5a3fff, #8f6bff);
+    transform: scale(1.05);
+}
+
+/* ===== TABLE CONTAINER (GLASS CARD) ===== */
+.table-container {
+    border-radius: 18px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== TABLE ===== */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ===== HEADER ===== */
+.admin-table thead {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.admin-table th {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    color: #cfc9ff;
+}
+
+/* ===== ROWS ===== */
+.admin-table td {
+    padding: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== ROW HOVER ===== */
+.admin-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== BUTTONS ===== */
+.edit-btn,
+.delete-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+/* EDIT BUTTON (PURPLE THEME) */
+.edit-btn {
+    background: linear-gradient(135deg, #7b5cff, #a084ff);
+    color: black;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #5a3fff, #8f6bff);
+}
+
+/* DELETE BUTTON (RED CONTRAST) */
+.delete-btn {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.delete-btn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+.table-container {
+    overflow-x: auto;
+}
+
+@media (max-width:412px) {
+    .edit-btn
+     {
+        margin-bottom: 10px;
+        border-radius: 8px;
+        border: none;
+        margin-right: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: 0.3s;
+        }
+    
+}

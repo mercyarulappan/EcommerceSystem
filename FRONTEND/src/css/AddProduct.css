@@ -1,0 +1,91 @@
+/* ===== PAGE BACKGROUND ===== */
+.add-product-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+    color: black;
+    background: radial-gradient(circle at top left, #2a1a4a, #0f0a1f);
+}
+
+/* ===== CARD (GLASS) ===== */
+.add-product-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== TITLE ===== */
+.add-product-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e0d9ff;
+    
+}
+
+/* ===== INPUTS ===== */
+.add-product-input,
+.add-product-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+.add-product-select option{
+    color: black;
+}
+
+.add-product-input::placeholder {
+    color: #bfbaff;
+}
+
+.add-product-input:focus,
+.add-product-select:focus {
+    border-color: #7b5cff;
+    box-shadow: 0 0 10px rgba(123, 92, 255, 0.5);
+}
+
+
+/* ===== FILE INPUT ===== */
+.file-input {
+    margin-bottom: 14px;
+    color: #cfc9ff;
+}
+
+/* ===== BUTTON ===== */
+.add-product-btn {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+
+    background: linear-gradient(135deg, #7b5cff, #a084ff);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.add-product-btn:hover {
+    background: linear-gradient(135deg, #5a3fff, #8f6bff);
+    transform: scale(1.03);
+}

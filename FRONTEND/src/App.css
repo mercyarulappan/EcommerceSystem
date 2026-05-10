@@ -1,0 +1,87 @@
+:root {
+  /* ===== MAIN PAGE ===== */
+  --bg-main: radial-gradient(circle at top left, #ffffff, #f7f5ff);
+  --text-main: #111111;
+  --text-secondary: #555555;
+  --title-color: #4b2fb5;
+
+  /* ===== CARDS / SIDEBAR ===== */
+  --card-bg: rgba(255, 255, 255, 1);
+  --sidebar-bg: rgba(248, 244, 255, 0.95);
+  --dropdown-bg: rgba(255, 255, 255, 0.95);
+
+  /* ===== NAVBAR ===== */
+  --navbar-bg: rgba(243, 237, 255, 0.98);
+
+  /* ===== GLASS / OVERLAY ===== */
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --overlay-bg: rgba(255, 255, 255, 0.35);
+
+  /* ===== LINKS ===== */
+  --link-color: #444444;
+  --placeholder-color: #777777;
+
+  /* ===== ACCENT ===== */
+  --accent: linear-gradient(135deg, #7b5cff, #a084ff);
+  --accent-hover: linear-gradient(135deg, #5a3fff, #8f6bff);
+  --accent-text: #7b5cff;
+  --accent-light: #c4b5fd;
+  --accent-border: #7b5cff;
+  --accent-soft: rgba(123, 92, 255, 0.15);
+  --accent-shadow: rgba(123, 92, 255, 0.25);
+  --accent-hover-text: #a084ff;
+
+  /* ===== DANGER ===== */
+  --danger-gradient: linear-gradient(135deg, #ff4d6d, #ff6b6b);
+  --danger-shadow: rgba(255, 77, 109, 0.4);
+  --danger-text: #ff6b6b;
+
+  /* ===== BORDERS / SHADOW ===== */
+  --border-light: rgba(123, 92, 255, 0.15);
+  --shadow: rgba(0, 0, 0, 0.08);
+  --card-shadow: rgba(80, 60, 150, 0.15);
+
+  /* ===== AVATAR ===== */
+  --avatar-gradient: linear-gradient(135deg, #4f46e5, #9333ea);
+  --avatar-hover-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+
+  /* ===== BODY ===== */
+  --body-light-bg: #f5f7fa;
+}
+
+/* ===== DARK THEME ===== */
+.dark-theme {
+  --bg-main: radial-gradient(circle at top left, #2a1a4a, #0f0a1f);
+  --text-main: #ffffff;
+  --text-secondary: #cfc9ff;
+  --title-color: #e0d9ff;
+
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --sidebar-bg: rgba(20, 10, 40, 0.9);
+  --dropdown-bg: rgba(71, 64, 64, 0.93);
+
+  --navbar-bg: rgba(20, 10, 40, 0.85);
+
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --overlay-bg: rgba(10, 5, 20, 0.6);
+
+  --link-color: #dcd6ff;
+  --placeholder-color: #bfbaff;
+
+  --accent: linear-gradient(135deg, #7b5cff, #a084ff);
+  --accent-hover: linear-gradient(135deg, #5a3fff, #8f6bff);
+  --accent-text: #a084ff;
+  --accent-light: #c4b5fd;
+  --accent-border: #7b5cff;
+  --accent-soft: rgba(123, 92, 255, 0.2);
+  --accent-shadow: rgba(123, 92, 255, 0.35);
+  --accent-hover-text: #a084ff;
+
+  --danger-gradient: linear-gradient(135deg, #ff4d6d, #ff6b6b);
+  --danger-shadow: rgba(255, 77, 109, 0.4);
+  --danger-text: #ff6b6b;
+
+  --border-light: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.35);
+  --card-shadow: rgba(0, 0, 0, 0.35);
+}

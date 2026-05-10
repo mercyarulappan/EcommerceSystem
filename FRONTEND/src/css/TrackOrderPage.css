@@ -1,0 +1,85 @@
+/* ===== PAGE BACKGROUND ===== */
+.track-container {
+    padding: 30px;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+
+    background: radial-gradient(circle at top left, #2a1a4a, #0f0a1f);
+    color: #ffffff;
+}
+
+/* ===== TITLE ===== */
+.track-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #e0d9ff;
+}
+
+/* ===== TIMELINE WRAPPER ===== */
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 30px;
+
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ===== TIMELINE ITEM ===== */
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+/* ===== GLOW DOT ===== */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #7b5cff, #a084ff);
+    box-shadow: 0 0 10px rgba(123, 92, 255, 0.8);
+}
+
+/* ===== STATUS ===== */
+.track-status {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ===== DESCRIPTION ===== */
+.track-desc {
+    font-size: 14px;
+    color: #cfc9ff;
+    margin: 5px 0;
+}
+
+/* ===== LOCATION ===== */
+.track-location {
+    font-size: 13px;
+    color: #bfbaff;
+}
+
+/* ===== DATE ===== */
+.track-date {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* ===== ACTIVE STEP (LATEST) ===== */
+.timeline-item:first-child::before {
+    background: linear-gradient(135deg, #4dff88, #00e676);
+    box-shadow: 0 0 12px rgba(77, 255, 136, 0.9);
+}
+
+/* ===== HOVER EFFECT ===== */
+.timeline-item:hover {
+    transform: translateX(5px);
+    transition: 0.3s;
+}

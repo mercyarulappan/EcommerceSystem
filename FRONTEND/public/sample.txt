@@ -1,0 +1,211 @@
+
+// import { Link, useNavigate } from "react-router-dom";
+// import { useContext, useEffect, useState } from "react";
+// import { AuthContext } from "../context/AuthContext";
+// import { toast } from "react-toastify";
+// import "../css/Navbar.css";
+// import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
+
+// const Navbar = () => {
+//   const { isAuthenticated, userRole, logout } = useContext(AuthContext);
+//   const navigate = useNavigate();
+//   const [profileOpen, setProfileOpen] = useState(false);
+//   const [search, setSearch] = useState("");
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   const handleSearch = (e) => {
+//     e.preventDefault();
+//     if (!search.trim()) return;
+//     navigate(`/?search=${search}`);
+//   };
+//   useEffect(() => {
+//     const handleClickOutside = () => setProfileOpen(false);
+//     window.addEventListener("click", handleClickOutside);
+//     return () => window.removeEventListener("click", handleClickOutside);
+//   }, []);
+
+//   return (
+//     <>
+//       <nav className="navbar">
+//         {/* LEFT */}
+//         <div className="nav-left">
+//           <Link to="/" className="logo">
+//             ShopEase
+//           </Link>
+//         </div>
+
+//         {/* CENTER */}
+//         <div className="nav-center center-section">
+//           <Link to="/" className="nav-link">
+//             Home
+//           </Link>
+
+//           <form onSubmit={handleSearch}>
+//             <div className="search-wrapper">
+//               <input
+//                 type="text"
+//                 placeholder="Search products..."
+//                 value={search}
+//                 onChange={(e) => setSearch(e.target.value)}
+//                 className="search-input"
+//               />
+//               <button type="submit" className="search-btn">
+//                 🔍
+//               </button>
+//             </div>
+//           </form>
+//         </div>
+
+//         {/* RIGHT */}
+//         <div className="nav-right">
+//           <div className="desktop-menu">
+//             {isAuthenticated ? (
+//               <>
+//                 {/* USER */}
+//                 {userRole === "USER" && (
+//                   <>
+//                     <Link to="/cart" className="nav-link">
+//                       Cart
+//                     </Link>
+//                     <Link to="/orders" className="nav-link">
+//                       My Orders
+//                     </Link>
+//                   </>
+//                 )}
+
+//                 {/* ADMIN */}
+//                 {userRole === "ADMIN" && (
+//                   <>
+//                     <Link to="/admin/products" className="nav-link">
+//                       Manage Products
+//                     </Link>
+//                     <Link to="/admin/orders" className="nav-link">
+//                       Manage Orders
+//                     </Link>
+//                   </>
+//                 )}
+
+//                 {/* COMMON */}
+//                 <div className="nav-icon" onClick={() => navigate("/cart")}>
+//                   <FaShoppingCart />
+//                 </div>
+
+//                 <div className="profile-wrapper">
+//                   <div
+//                     className="nav-icon"
+//                     onClick={() => setProfileOpen(!profileOpen)}
+//                   >
+//                     <FaUserCircle />
+//                   </div>
+//                   {profileOpen && (
+//                     <div className="profile-dropdown">
+//                       <div
+//                         className="dropdown-item"
+//                         onClick={(e) => {
+//                           e.stopPropagation();
+//                           setProfileOpen(!profileOpen);
+//                         }}
+//                       >
+//                         Profile
+//                       </div>
+//                       <div
+//                         className="dropdown-item logout"
+//                         onClick={() => {
+//                           logout();
+//                           navigate("/login");
+//                         }}
+//                       >
+//                         Logout
+//                       </div>
+//                     </div>
+//                   )}
+//                 </div>
+//               </>
+//             ) : (
+//               <>
+//                 <Link to="/login" className="auth-btn">
+//                   Login
+//                 </Link>
+//                 <Link to="/register" className="primary-btn">
+//                   Register
+//                 </Link>
+//               </>
+//             )}
+//           </div>
+
+//           {/* MOBILE ICON */}
+//           <div className="menu-icon" onClick={() => setMenuOpen(true)}>
+//             ☰
+//           </div>
+//         </div>
+//       </nav>
+
+//       {/* SIDEBAR */}
+//       {menuOpen && (
+//         <>
+//           <div className="overlay" onClick={() => setMenuOpen(false)}></div>
+
+//           <div className="sidebar">
+//             <div className="sidebar-header">
+//               <button className="close-btn" onClick={() => setMenuOpen(false)}>
+//                 ✖
+//               </button>
+//             </div>
+
+//             {isAuthenticated ? (
+//               <>
+//                 <Link to="/profile" className="side-link">
+//                   Profile
+//                 </Link>
+
+//                 {userRole === "USER" && (
+//                   <>
+//                     <Link to="/cart" className="side-link">
+//                       Cart
+//                     </Link>
+//                     <Link to="/orders" className="side-link">
+//                       My Orders
+//                     </Link>
+//                   </>
+//                 )}
+
+//                 {userRole === "ADMIN" && (
+//                   <>
+//                     <Link to="/admin/products" className="side-link">
+//                       Manage Products
+//                     </Link>
+//                     <Link to="/admin/orders" className="side-link">
+//                       Manage Orders
+//                     </Link>
+//                   </>
+//                 )}
+
+//                 <button
+//                   className="side-logout"
+//                   onClick={() => {
+//                     logout();
+//                     navigate("/login");
+//                     toast.success("Logout successful");
+//                   }}
+//                 >
+//                   Logout
+//                 </button>
+//               </>
+//             ) : (
+//               <>
+//                 <Link to="/login" className="side-link">
+//                   Login
+//                 </Link>
+//                 <Link to="/register" className="side-link">
+//                   Register
+//                 </Link>
+//               </>
+//             )}
+//           </div>
+//         </>
+//       )}
+//     </>
+//   );
+// };
+
+// export default Navbar;
