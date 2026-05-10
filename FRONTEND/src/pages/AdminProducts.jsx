@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { deleteProduct, getAllProductsByAdmin, updateProductStatus } from "../services/productService";
+import { getAllProducts, deleteProduct, getAllProductsByAdmin, updateProductStatus } from "../services/productService";
 import { useNavigate } from "react-router-dom";
 import "../css/AdminProducts.css";
 import Swal from "sweetalert2";
@@ -27,16 +27,15 @@ const AdminProducts = () => {
     });
   };
 
-useEffect(() => {
-  const fetchProduct = async () => {
-    const res = await getProductById(id);
-    setProduct(res.data);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    const res = await getAllProductsByAdmin();
+    setProducts(res.data);
   };
-
-  fetchProduct();
-}, [id]);
-
-  
 
   const handleDelete = async (id) => {
     const result = await Swal.fire({

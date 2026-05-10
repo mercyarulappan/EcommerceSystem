@@ -21,6 +21,14 @@ const ProductDetails = () => {
   const [relatedProducts,setRelatedProducts] = useState([]);
   
 
+  const fetchProduct = async () => {
+    try {
+      const response = await getProductById(id);
+      setProduct(response.data);
+    } catch (error) {
+      console.error("Error fetching product", error);
+    }
+  };
   
   
 
