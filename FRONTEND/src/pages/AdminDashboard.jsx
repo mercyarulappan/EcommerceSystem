@@ -18,14 +18,14 @@ const AdminDashboard = () => {
   });
   const [editId, setEditId] = useState(null);
 
-  const fetchProducts = async () => {
-    const res = await getAllProducts();
-    setProducts(res.data);
-  };
   useEffect(() => {
-    fetchProducts();
-    fetchOrders();
-  }, []);
+    const fetchProduct = async () => {
+      const res = await getProductById(id);
+      setProduct(res.data);
+    };
+
+    fetchProduct();
+  }, [id]);
 
   
 

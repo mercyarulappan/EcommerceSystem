@@ -9,14 +9,14 @@ const EditProduct = () => {
   const [product, setProduct] = useState({});
 
 
-  const fetchProduct = async () => {
-    const res = await getProductById(id);
-    setProduct(res.data);
-  };
   useEffect(() => {
-    fetchProduct();
-  }, [fetchProduct]);
+    const fetchProduct = async () => {
+      const res = await getProductById(id);
+      setProduct(res.data);
+    };
 
+    fetchProduct();
+  }, [id]);
   
 
   const handleChange = (e) => {

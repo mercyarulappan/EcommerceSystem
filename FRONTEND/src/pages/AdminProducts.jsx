@@ -27,13 +27,14 @@ const AdminProducts = () => {
     });
   };
 
-const fetchProducts = async () => {
-  const res = await getAllProductsByAdmin();
-  setProducts(res.data);
-};
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+useEffect(() => {
+  const fetchProduct = async () => {
+    const res = await getProductById(id);
+    setProduct(res.data);
+  };
+
+  fetchProduct();
+}, [id]);
 
   
 

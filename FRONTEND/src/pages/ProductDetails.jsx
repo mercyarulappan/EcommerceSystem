@@ -21,19 +21,7 @@ const ProductDetails = () => {
   const [relatedProducts,setRelatedProducts] = useState([]);
   
 
-  const fetchProduct = async () => {
-    try {
-      const response = await getProductById(id);
-      
-      setProduct(response.data);
-    } catch (error) {
-      console.error("Error fetching product", error);
-    }
-  };
-  useEffect(() => {
-    fetchProduct();
-    fetchRelatedProducts();
-  }, [fetchProduct, fetchRelatedProducts]);
+  
   
 
   const handleDeleteReview = async (reviewId) => {
@@ -77,15 +65,32 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await getProductById(id);
+        setProduct(response.data);
+      } catch (error) {
+        console.error("Error fetching product", error);
+      }
+    };
+
+    const fetchRelatedProducts = async () => {
+      try {
+        const res = await axios.get(
+          `http://localhost:8080/api/products/${id}/related`,
+        );
+        setRelatedProducts(res.data);
+      } catch (error) {
+        console.error("Error fetching related products", error);
+      }
+    };
+
+    fetchProduct();
     fetchRelatedProducts();
   }, [id]);
+  
 
-  const fetchRelatedProducts = async () => {
-    const res = await axios.get(
-      `http://localhost:8080/api/products/${id}/related`,
-    );
-    setRelatedProducts(res.data);
-  };
+  
 
   const submitReview = async () => {
     try {
